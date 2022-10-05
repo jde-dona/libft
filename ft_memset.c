@@ -6,20 +6,21 @@
 /*   By: jde-dona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:11:29 by jde-dona          #+#    #+#             */
-/*   Updated: 2022/10/04 18:04:21 by jde-dona         ###   ########.fr       */
+/*   Updated: 2022/10/05 15:29:15 by jde-dona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memset(char *s, int c, unsigned int n)
+void	*ft_memset(void *s, int c, unsigned int n)
 {
 	int i;
 	i = n - 1;
+	char *d = (char *) s;
 	while (i >= 0)
 	{
-		s[i] = c;
+		d[i] = c;
 		i--;
 	}
-	return(s);
+	return(d);
 }
