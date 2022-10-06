@@ -1,27 +1,17 @@
-#include <stdio.h>
-char	*ft_strrchr(char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	int i = 0;
-	int a = 0;
-	char *str1;
-	str1 = str;
+	int	i;
+
+	i = 0;
 	while (str[i] != '\0')
+		i++;
+	while (i > 0)
 	{
 		if (str[i] == c)
 		{
-		    str1[a] = str[i];
-			a++;
-			printf("c");
+			return ((char *)&str[i]);
 		}
-
-		printf("%c", str[i]);
-		i++;
+		i--;
 	}
-
-}
-int	main()
-{
-	char *a = "sacascasem";
-	int b = 'e';
-	ft_strrchr(a, b);
+	return (NULL);
 }
