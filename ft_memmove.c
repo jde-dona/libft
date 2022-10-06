@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-dona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:46:38 by jde-dona          #+#    #+#             */
-/*   Updated: 2022/10/06 11:30:42 by jde-dona         ###   ########.fr       */
+/*   Created: 2022/10/06 10:16:50 by jde-dona          #+#    #+#             */
+/*   Updated: 2022/10/06 11:32:02 by jde-dona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-void	*ft_memcpy(void *dest, const void * src, int n)
+void	*ft_memmove(void *str1, const void *str2, size_t n)
 {
-	char *d = (char *) dest;
-	const char *s = (char *) src;
+	char *dest = (char *)str1;
+	const char *src = (char *)str2;
+	char carattere = 'e';
 	int i = 0;
 	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return d;
+		{
+			carattere = src[i];
+			dest[i] = carattere;
+			i++;
+		}
+	return dest;
 }
