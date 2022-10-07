@@ -21,7 +21,7 @@
   <li> h j k l = mouse </li>
   <li> move cursor with e</li>
   <li> rt == replace a character with t</li>
-  <li> Press y to copy </li>
+  <li> Press y to copy and p for paste</li>
   <li> delete to the end of the line with d operator and $ motion </li>
    <li> ctrl-alt + arrow == move into Desktop-enviroment </li>
   </ul>
