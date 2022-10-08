@@ -6,17 +6,15 @@
 /*   By: jde-dona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:52:28 by jde-dona          #+#    #+#             */
-/*   Updated: 2022/10/04 15:57:25 by jde-dona         ###   ########.fr       */
+/*   Updated: 2022/10/08 10:53:54 by jde-dona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c<= 127)
-	{
-		return 1;
-	}
-	else 
-		return 0;
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

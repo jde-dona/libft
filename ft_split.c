@@ -6,18 +6,20 @@
 /*   By: jde-dona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:14:46 by jde-dona          #+#    #+#             */
-/*   Updated: 2022/10/07 16:02:19 by jde-dona         ###   ########.fr       */
+/*   Updated: 2022/10/08 12:12:00 by jde-dona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 char **ft_split(char const *s, char c)
 {
 	int	i;
 	int	j;
 	int 	b;
 	int	counter;
-	char	**arr;	
+	char	**arr;
 	int	last;
 
 	i = 0;
@@ -51,7 +53,7 @@ char **ft_split(char const *s, char c)
 
 	arr[counter] = malloc((i - last) * sizeof(char));
 	while (last < i)
-	{	
+	{
 		arr[counter][x] = s[last];
 		x++;
 		last++;

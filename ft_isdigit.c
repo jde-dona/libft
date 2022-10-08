@@ -6,17 +6,15 @@
 /*   By: jde-dona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:30:47 by jde-dona          #+#    #+#             */
-/*   Updated: 2022/10/04 15:44:52 by jde-dona         ###   ########.fr       */
+/*   Updated: 2022/10/08 10:54:50 by jde-dona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 int	ft_isdigit(char c)
 {
 	if (c >= '0' && c <= '9')
-	{
-		return	1;
-	}
+		return (1);
 	else
-	{
-		return 0;
-	}
+		return (0);
 }

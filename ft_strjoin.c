@@ -6,42 +6,37 @@
 /*   By: jde-dona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:32:14 by jde-dona          #+#    #+#             */
-/*   Updated: 2022/10/06 14:45:00 by jde-dona         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:51:23 by jde-dona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-char *ft_strjoin(char const *s1, char const *s2)
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	n1;
-	int	n2;
-	int	i;
+	int		i;
+	int		n;
 	char	*dest;
 
-	n1 = 0;
-	n2 = 0;
-	while (s1[n1] != '\0')
-		n1++;
-	while (s2[n2] != '\0')
-		n2++;
-	i = n1 + n2;
+	i = ((ft_strlen(s1)) + (ft_strlen(s2)));
 	dest = malloc(i * sizeof(char));
 	if (dest == NULL)
-		return NULL;
+		return (NULL);
 	i = 0;
-	while (i < n1)
+	while (i < (ft_strlen(s1)))
 	{
 		dest[i] = s1[i];
 		i++;
 	}
-	n1 = 0;
-	while (n1 < n2)
+	n = 0;
+	while (n < ft_strlen(s2))
 	{
-		dest[i] = s2[n1];
+		dest[i] = s2[n];
 		i++;
-		n1++;
+		n++;
 	}
 	dest[i] = '\0';
-	return dest;
+	return (dest);
 }

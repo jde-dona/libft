@@ -6,16 +6,19 @@
 /*   By: jde-dona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:04:02 by jde-dona          #+#    #+#             */
-/*   Updated: 2022/10/04 16:10:18 by jde-dona         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:53:13 by jde-dona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 int	ft_strlen(char *str)
 {
 	int	a;
+
 	a = 0;
 	while (str[a] != '\0')
 	{
 		a++;
 	}
-	return a;
+	return (a);
 }

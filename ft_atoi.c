@@ -1,8 +1,24 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jde-dona <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/08 10:41:18 by jde-dona          #+#    #+#             */
+/*   Updated: 2022/10/08 10:42:22 by jde-dona         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_atoi(const char *str)
 {
-	int i = 0;
-	int n = 0;
+	int	i;
+	int	n;
+
+	i = 0;
+	n = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 48 && str[i] <= 57)
@@ -12,15 +28,9 @@ int	ft_atoi(const char *str)
 		}
 		else
 		{
-			return 0;
+			return (0);
 		}
 		i++;
 	}
-	return n;
-}
-
-int	main(int ac, char **av)
-{
-	char *a = av[1];
-	printf("%d", ft_atoi(a));
+	return (n);
 }
