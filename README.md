@@ -12,6 +12,7 @@
   <li>  18 ottobre alle 17:00 : Webinar Voodoo gaming --> https://voodoo.zoom.us/w/94671748945?tk=Wg2_qSoaeFa4v4ho3oBvPWuvOUqEuZW-YuPHPNmZWN8.DQMAAAAWCuA_URZhT1VnM2R4SlJCT2s1VG42X2p5RFp3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&uuid=WN_TAp2QP1kR3-0_-e4Plm78A </li>
   <li> per comandi git: https://www.loginradius.com/blog/engineering/git-commands/ </li>
   <li> Link command line tutorial VIM: https://linuxconfig.org/vim-tutorial </li>
+  <li> https://velog.io/@jungjaedev/ftstrtrim </li>
   <h2> VIM </h2>
   <ul>
   <li> Deleting line with double d </li>
