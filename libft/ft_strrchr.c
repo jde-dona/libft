@@ -20,11 +20,11 @@ char	*ft_strrchr(const char *str, int c)
 	str2 = 0;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			str2 = (char *)(str + i);
 		i++;
 	}
-	if (str[i] == c)
+	if (str[i] == (char)c)
 		str2 = (char *)(str + i);
 	return (str2);
 }
