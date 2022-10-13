@@ -6,64 +6,62 @@
 /*   By: nbordoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:39:47 by nbordoni          #+#    #+#             */
-/*   Updated: 2022/10/10 19:04:09 by nbordoni         ###   ########.fr       */
+/*   Updated: 2022/10/13 17:32:41 by nbordoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_printfunct(int neg, char *dest, int number, int n)
+int	len(long nb)
 {
-	if (neg != 0)
+	int		len;
+
+	len = 0;
+	if (nb < 0)
 	{
-		dest[0] = '-';
-		while (number > 0)
-		{
-			dest[number] = (n % 10) + 48;
-			n /= 10;
-			number--;
-		}
+		nb = nb * -1;
+		len++;
 	}
-	else
+	while (nb > 0)
 	{
-		if (n == 0)
-		{
-			dest[0] = 48;
-			return (dest);
-		}
-		dest[number] = '\0';
-		while ((--number) >= 0)
-		{
-			dest[number] = (n % 10) + 48;
-			n /= 10;
-		}
+		nb = nb / 10;
+		len++;
 	}
-	return (dest);
+	return (len);
 }
 
-char	*ft_itoa(int n)
+void	ft_it2(long n, char *str, int i)
 {
-	int		number;
-	char	*dest;
-	int		num_div;
-	int		neg;
+	while (n > 0)
+	{
+		str[i] = 48 + (n % 10);
+		n = n / 10;
+		i--;
+	}
+}
 
-	neg = 0;
-	number = 0;
+char	*ft_itoa(int nb)
+{
+	char	*str;
+	long	n;
+	int		i;
+
+	n = nb;
+	i = len(n);
+	str = (char *) malloc (sizeof (char) * (i + 1));
+	if (str == NULL)
+		return (NULL);
+	str[i--] = '\0';
+	if (n == 0)
+	{
+		str[0] = 48;
+		return (str);
+	}
 	if (n < 0)
 	{
-		n *= -1;
-		neg = -1;
+		str[0] = '-';
+		n = n * -1;
 	}
-	num_div = n;
-	while (num_div >= 0)
-	{
-		num_div /= 10;
-		number++;
-	}
-	dest = malloc ((number + 1) * sizeof(char));
-	if (dest == NULL)
-		return (NULL);
-	ft_printfunct(neg, dest, number, n);
-	return (dest);
+	ft_it2(n, str, i);
+	return (str);
 }
