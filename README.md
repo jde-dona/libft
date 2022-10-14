@@ -24,6 +24,7 @@
   <li> rt == replace a character with t</li>
   <li> Press y to copy and p for paste</li>
   <li> delete to the end of the line with d operator and $ motion </li>
+  <li> o for a new line</li>
    <li> ctrl-alt + arrow == move into Desktop-enviroment </li>
    <li> v for selection like shift in text editor </li>
   </ul>
